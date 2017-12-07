@@ -91,10 +91,6 @@ do
 if  grep -sqh "$match_name" "$file"; then
 referenced=true
 fi
-done
-
-for file  in `echo $check_files | sed 's/\n/ /g'`
-do
 if  grep -sqh "$dir_name" "$file"; then
 referenced=true
 fi
@@ -112,3 +108,4 @@ fi
 done
 
 echo "============= Total $COUNT unused image files ============="
+
